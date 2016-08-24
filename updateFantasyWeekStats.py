@@ -4,8 +4,6 @@ import psycopg2  #for postgres connection
 import psycopg2.extras
 import yahooID    #for convert fantasyID to yahooID
 import statsToUpdate
-import datetime
-import time
 
 try:
   # conn = psycopg2.connect("dbname='d41t17krm7a40' user='blagfvvvucxgkt' host='ec2-50-17-255-49.compute-1.amazonaws.com' password='lsqSj-7P24N-W9sT2DRHcxG260'")
@@ -19,10 +17,10 @@ try:
 
   r = requests.get(url, headers = headers)
   parsed_json = json.loads(r.text)
-  counter = 46
+  counter = 0
 
   plen = len(parsed_json)
-
+  
   while (counter < plen) :
     row = parsed_json[counter]
     print('row------------')
