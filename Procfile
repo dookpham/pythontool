@@ -1,1 +1,1 @@
-worker: python updateFantasyWeekStats.py
+web: python updateFantasyWeekStats.py
