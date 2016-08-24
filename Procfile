@@ -1,1 +1,1 @@
-web: python updateFantasyWeekStats.py
+#web: python updateFantasyWeekStats.py
