@@ -1,8 +1,14 @@
+import time
 import json
 
-print('cron job running')
+def job():
+  print('cron job running')
+  allPlayers = ['hello']
+  with open('/usr/src/app/test.txt', 'w') as outfile:
+    json.dump(allPlayers, outfile)
+  time.sleep(60)
+  job()
 
-allPlayers = ['hello']
+job()
 
-with open('/Users/ducpham/hackreactor/thesis/pythonTools/test.txt', 'w') as outfile:
-  json.dump(allPlayers, outfile)
+
